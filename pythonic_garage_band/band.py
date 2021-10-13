@@ -1,5 +1,8 @@
 from abc import abstractclassmethod
 class Musician:
+    """
+    class to handle inheritt function 
+    """
     members = []
     def __init__(self, name):
         self.name = name
@@ -18,14 +21,23 @@ class Musician:
         pass
 
 class Band:
-    def __init__(self,name,members,inst=''):
+    """
+    class contain 2 attribute (string,list)
+    list inherit from Musican 
+    creat method play_solo in order add to band
+    contan 
+    """
+    def __init__(self,name,members):
         self.name=name
         self.members=members
+    def __repr__(self):
+        return (f"{self.name}")
     def play_solo(self):
         return self.inst
 
 class Guitarist(Band):
-    def __init__(self,name,inst=''):
+
+    def __init__(self,name):
         self.name=name
     def __str__(self):
         return f"My name is {self.name} and I play guitar"
@@ -35,7 +47,7 @@ class Guitarist(Band):
         return "guitar"
 
 class Drummer(Band):
-    def __init__(self,name,inst='rattle boom crash'):
+    def __init__(self,name):
         self.name=name
     def __str__(self):
        return f"My name is {self.name} and I play drums"
@@ -46,7 +58,7 @@ class Drummer(Band):
 
 
 class Bassist(Band):
-    def __init__(self,name,inst='bom bom buh bom'):
+    def __init__(self,name):
         self.name=name
     def __str__(self):
        return f"My name is {self.name} and I play bass"
