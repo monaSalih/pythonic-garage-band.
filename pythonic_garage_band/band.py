@@ -68,3 +68,12 @@ class Bassist(Musician):
        def play_solo (self):
           return 'bom bom buh bom'
 
+
+if __name__ == "__main__":
+    Joan = Guitarist('Joan Jett')
+    Sheila = Drummer('Sheila E.')
+    Meshell = Bassist('Meshell Ndegeocello')
+
+    print(Joan)
+    print(Sheila)
+    print(Meshell)
