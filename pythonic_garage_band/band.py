@@ -67,3 +67,4 @@ class Bassist(Musician):
           return 'bass'
        def play_solo (self):
           return 'bom bom buh bom'
+
